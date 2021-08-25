@@ -65,12 +65,12 @@ while True:
     
     # if the face is unknown, unknown video face will save to 'UnkniwnVideo' folder 
     filename = "Unknown_" + str(now1.strftime('%d %m %Y - %H %M %S' ))  + '.avi'
-    path1 = 'D:/code/face/UnknownVideo'
+    path1 = 'UnknownVideo'
     out = cv2.VideoWriter(os.path.join(path1 , filename), cv2.VideoWriter_fourcc(*'XVID'), 1, (640, 480))
     
     # Save video into AllVideo, each 900s = 15 minutes
     filename2 = 'All_' + str(now1.strftime('%d %m %Y - %H %M %S' )) + '.avi'
-    path2 = 'D:/code/face/AllVideo'
+    path2 = 'AllVideo'
     out2 = cv2.VideoWriter(os.path.join(path2 , filename2), cv2.VideoWriter_fourcc(*'XVID'), 20, (640, 480))
     while( int(time.time() - start_time) < capture_duration ): #after 900s will break 
         success, img = cap.read()
@@ -100,7 +100,7 @@ while True:
                     markAttendance(name)
                 else:
                     now = datetime.now()
-                    path = 'D:/code/face/Unknown'
+                    path = 'Unknown'
                     name = 'Unknown'
                     
                     # if the face is unknown, take picture automatically

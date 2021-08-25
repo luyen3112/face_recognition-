@@ -8,6 +8,9 @@ Building a face recognition system.
 ![Untitled](https://user-images.githubusercontent.com/89532499/130821637-10c34f24-61e8-411b-84de-d7993ff29940.jpg)
 
 Install python libraries in command promt:
+
 python -m pip install numpy
+
 python -m pip install opencv-python
+
 python -m pip install face_recognition
